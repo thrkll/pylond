@@ -1,0 +1,5 @@
+__pycache__/
+pylond/tests.py
+pylond/scrapers/
+.structure.txt
+.todo.txt

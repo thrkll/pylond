@@ -1,0 +1,19 @@
+
+📦 pylond
+  📁 img
+    📷 img1.png
+    📷 img2.png
+  📁 pylond
+    📜 pylond.py
+    📜 __init__.py
+    📜 tests.py
+    📁 scrapers
+        ...
+    📁 data
+      📜 country_data.csv
+      📜 country_data.json
+  📜 LICENCE.txt
+  📜 README.md
+  📜 .gitignore
+  📜 structure.txt
+  📜 todo.txt
