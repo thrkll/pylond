@@ -6,7 +6,7 @@ import numpy as np
 #   stafrófsröð
 
 def open_data():
-    with open('data/country_data.csv', 'r', encoding = 'utf8') as file:
+    with open('pylond/data/country_data.csv', 'r', encoding = 'utf8') as file:
         reader = csv.reader(file)
         for row in reader:
             yield row
@@ -82,3 +82,15 @@ def levenshtein_ratio(s, t):
                                  distance[row-1][col-1] + cost)
     ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
     return ratio
+
+def iter_countries():
+    result = []
+    for row in countries:
+        inner_dict = {}
+        for key in headers:
+            for value in row:
+                inner_dict[key] = value
+                row.remove(value)
+                break
+        result.append(inner_dict)
+    return result
