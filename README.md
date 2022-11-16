@@ -145,7 +145,7 @@ $ pip install -r requirements.txt
 
 ### Return all countries
 
-###### iter_countries() will return an alphabetic list of all countries. The _sort_ parameter (optional) takes "eng" (default) to sort based on the English short name or "isl" to sort based on the Icelandic short name translation.
+###### iter*countries() will return an alphabetic list of all countries. The \_sort* parameter (optional) takes "eng" (default) to sort based on the English short name or "isl" to sort based on the Icelandic short name translation.
 
 ```python
 >>> from pylond import iter_countries
@@ -181,9 +181,17 @@ Pylond also embeds data from the [Database of Icelandic Morphology (DIM)](https:
 
 #### 📄 [Database of Icelandic Morphology / Beygingarlýsing íslensks nútímamáls](https://bin.arnastofnun.is/) (CC-BY-SA 4.0)
 
+## Developement
+
+To help develop `pylond`, run the following command to install required developement dependencies.
+
+```bash
+$ pip install -e .[dev]
+```
+
 ## Versions
 
-📦 1.0.0 - Initial release
+📦 0.0.1 - Initial unstable release
 
 ## Licence
 
