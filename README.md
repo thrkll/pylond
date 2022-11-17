@@ -11,17 +11,18 @@
 
 ## Installation
 
-`pylond` is available to install via [PyPi]().
+`pylond` is available to install via [PyPi](). 
 
 ```
 $ pip install pylond
 ```
 
-Alternatively, clone the repository and install requirements.
+Alternatively, clone the repository and install the package using the following commands.
 
 ```
 $ git clone https://github.com/thrkll/pylond.git
-$ pip install -r requirements.txt
+$ cd pylond
+$ python setup.py install
 ```
 
 ## Usage examples
@@ -145,7 +146,7 @@ $ pip install -r requirements.txt
 
 ### Return all countries
 
-###### iter*countries() will return an alphabetic list of all countries. The \_sort* parameter (optional) takes "eng" (default) to sort based on the English short name or "isl" to sort based on the Icelandic short name translation.
+###### iter_countries() will return an alphabetic list of all countries. The *sort* parameter (optional) takes *en* (default) to sort based on the English short name or *is* to sort based on the Icelandic short name translation.
 
 ```python
 >>> from pylond import iter_countries
@@ -181,13 +182,6 @@ Pylond also embeds data from the [Database of Icelandic Morphology (DIM)](https:
 
 #### 📄 [Database of Icelandic Morphology / Beygingarlýsing íslensks nútímamáls](https://bin.arnastofnun.is/) (CC-BY-SA 4.0)
 
-## Developement
-
-To help develop `pylond`, run the following command to install required developement dependencies.
-
-```bash
-$ pip install -e .[dev]
-```
 
 ## Versions
 
