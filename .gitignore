@@ -1,5 +1,8 @@
 __pycache__/
 pylond/tests.py
 pylond/scrapers/
-structure.txt
-todo.txt
+pylond\__pycache__
+tests\__pycache__
+.pytest_cache
+.geckodriver.log
+.pylond.egg-info
