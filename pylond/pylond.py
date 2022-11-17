@@ -1,9 +1,12 @@
 import csv
+import os
 import numpy as np
 
 def open_data():
     '''Opens data to be utilized by other functions.'''
-    with open('pylond/data/country_data.csv', 'r', encoding = 'utf8') as file:
+    root_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
+    data_path = os.path.join(root_dir, 'pylond', 'data', 'country_data.csv')
+    with open(data_path, 'r', encoding = 'utf8') as file:
         reader = csv.reader(file)
         for row in reader:
             yield row
@@ -84,11 +87,9 @@ def levenshtein_ratio(s, t):
     ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
     return ratio
 
-def iter_countries(sort='eng') -> str:
+def iter_countries(sort='en') -> str:
     '''Returns a list of countries. The sort parameter can take "eng" (default) or "isl"'''
-    valid = ['eng', 'isl']
-    if sort not in valid:
-        raise ValueError('Sort parameter can only take "eng" or "isl"')
+    assert sort in ['en', 'is'], 'Sort parameter can only take "en" or "is"'
     result = []
     for row in countries:
         inner_dict = {}
@@ -98,6 +99,6 @@ def iter_countries(sort='eng') -> str:
                 row.remove(value)
                 break
         result.append(inner_dict)
-    if sort == valid[1]:
+    if sort == 'is':
         result = sorted(result, key = lambda d: d['short_name'])
     return result
