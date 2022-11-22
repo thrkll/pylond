@@ -11,11 +11,10 @@ def open_data():
         for row in reader:
             yield row
 
-countries = open_data()
-headers = next(countries)
-
-def alpha2(alpha2) -> str:
-    '''Return a country based on the ISO-3166-1 alpha2 code.'''
+def alpha2(alpha2) -> dict:
+    '''Returns a dict based on the ISO-3166-1 alpha2 code.'''
+    countries = open_data()
+    headers = next(countries)
     result = {}
     for row in countries:
         if row[1].lower() == alpha2.lower():
@@ -26,8 +25,10 @@ def alpha2(alpha2) -> str:
                     break
     return result
 
-def alpha3(alpha3) -> str:
-    '''Return a country based on the ISO-3166-1 alpha3 code.'''
+def alpha3(alpha3) -> dict:
+    '''Returns a dict based on the ISO-3166-1 alpha3 code.'''
+    countries = open_data()
+    headers = next(countries)
     result = {}
     for row in countries:
         if row[2].lower() == alpha3.lower():
@@ -38,8 +39,10 @@ def alpha3(alpha3) -> str:
                     break
     return result
 
-def numeric(numeric)-> int:
-    '''Return a country based on the ISO-3166-1 numeric code.'''
+def numeric(numeric)-> dict:
+    '''Returns a dict based on the ISO-3166-1 numeric code.'''
+    countries = open_data()
+    headers = next(countries)
     result = {}
     for row in countries:
         if int(row[3]) == numeric:
@@ -50,8 +53,14 @@ def numeric(numeric)-> int:
                     break
     return result
 
-def from_english(english_name, lev_ratio=1) -> str:
-    '''Search for a country based on the English short name. Optional lev_ratio parameter should be in range of 0 to 1 (default).'''
+def from_english(english_name, lev_ratio=1) -> list:
+    '''Returns a list based on the English short name. Optional lev_ratio parameter should be in range of 0 to 1 (default).'''
+    if not isinstance(lev_ratio, (int, float)):
+        raise TypeError(f'lev_ratio should be int or float, got: {type(lev_ratio).__name__}')
+    if not 0 <= lev_ratio <= 1:
+        raise ValueError(f'lev_ratio should be in range of 0 and 1, got: {lev_ratio}')
+    countries = open_data()
+    headers = next(countries)
     result = []
     for row in countries:
         ratio = levenshtein_ratio(row[0].lower(), english_name.lower())
@@ -66,7 +75,7 @@ def from_english(english_name, lev_ratio=1) -> str:
             result.append(inner_dict)
     return result
 
-def levenshtein_ratio(s, t):
+def levenshtein_ratio(s, t) -> float:
     '''Calculates levenshtein distance and ratio for from_english().'''
     rows = len(s)+1
     cols = len(t)+1
@@ -87,9 +96,12 @@ def levenshtein_ratio(s, t):
     ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
     return ratio
 
-def iter_countries(sort='en') -> str:
-    '''Returns a list of countries. The sort parameter can take "eng" (default) or "isl"'''
-    assert sort in ['en', 'is'], 'Sort parameter can only take "en" or "is"'
+def iter_countries(sort='en') -> list:
+    '''Returns a list of countries. The sort parameter can take "en" (default) or "is"'''
+    if sort not in ['en', 'is']:
+        raise ValueError(f'Sort parameter can only take en or is, got: {sort}')
+    countries = open_data()
+    headers = next(countries)
     result = []
     for row in countries:
         inner_dict = {}
