@@ -4,6 +4,7 @@
 [![PyPI](https://img.shields.io/pypi/v/pylond?logo=python&logoColor=white)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 [![Release](https://shields.io/github/v/release/thrkll/pylond?display_name=tag)]()
+[![Build](https://github.com/thrkll/pytest/actions/workflows/python-app.yml/badge.svg)]()
 
 ### Icelandic translations of countries and nationalities
 
