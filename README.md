@@ -4,11 +4,11 @@
 [![PyPI](https://img.shields.io/pypi/v/pylond?logo=python&logoColor=white)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 [![Release](https://shields.io/github/v/release/thrkll/pylond?display_name=tag)]()
-[![Build](https://github.com/thrkll/pylond/actions/workflows/python-app.yml/badge.svg)]()
+[![pytest](https://github.com/thrkll/pylond/actions/workflows/python-app.yml/badge.svg)]()
 
 ### Icelandic translations of countries and nationalities
 
-`pylond` is a Python 3 package that provides translations of countries and nationalities to Icelandic.
+`pylond` is a Python 3 package that provides Icelandic translations of countries and nationalities
 
 ## Installation
 
