@@ -1,9 +1,9 @@
 # pylond
 
 [![Python](https://img.shields.io/badge/Python_3-3776AB?logo=python&logoColor=white)](https://opensource.org/licenses/MIT)
-[![PyPI](https://img.shields.io/pypi/v/pylond?logo=python&logoColor=white)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
-[![Release](https://shields.io/github/v/release/thrkll/pylond?display_name=tag)]()
+[![PyPI](https://img.shields.io/pypi/v/pylond?logo=python&logoColor=white)]()
+[![Release](https://img.shields.io/github/v/release/thrkll/pylond)]()
 [![pytest](https://github.com/thrkll/pylond/actions/workflows/python-app.yml/badge.svg)]()
 
 ### Icelandic translations of countries and nationalities
