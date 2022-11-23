@@ -1,0 +1,227 @@
+alpha3,english_name,icelandic_name,scope
+est,Estonian,eistneska
+grn,Guarani,gvaraníska
+yid,Yiddish,jiddíska
+que,Quechua,ketsúska
+zho,Chinese,kínverska
+kon,Kongo,kongóska
+kur,Kurdish,kúrdíska
+msa,Malay (macrolanguage),malajíska
+pus,Pushto,pastó
+fas,Persian,persneska
+rom,Romany,rómíska
+swa,Swahili (macrolanguage),svahílí
+uzb,Uzbek,úsbekska
+ekk,Standard Estonian,stöðluð eistneska. 
+gug,Paraguayan Guaraní,paragvæsk gvaraníska
+ydd,Eastern Yiddish,austurjiddíska
+yih,Western Yiddish,vesturjiddíska
+cmn,Mandarin Chinese,mandarínkínverska
+kng,Koongo,kongóska.
+ckb,Central Kurdish,miðkúrdíska
+kmr,Northern Kurdish,norðurkúrdíska
+sdh,Southern Kurdish,suðurkúrdíska.
+zlm,Malay (individual language),malajíska- einkum í Singapúr
+zsm,Standard Malay,stöðluð malajíska- einkum í Brúnei og Malasíu.
+pbt,Southern Pashto,suðurpastó
+pbu,Northern Pashto,norðurpastó
+pes,Iranian Persian,vesturfarsí- farsí
+rmn,Balkan Romani,balkanrómíska
+rme,Angloromani,englandsrómíska
+rml,Baltic Romani,eystrasaltsrómíska
+rmf,Kalo Finnish Romani,finnlandsrómíska
+rmc,Carpathian Romani,karpatarómíska
+rmo,Sinte Romani,sinterómíska
+rmq,Caló,spánarrómíska
+rmy,Vlax Romani,vlakrómíska
+rmw,Welsh Romani,walesrómíska
+swc,Congo Swahili,kongósvahílí
+swh,Swahili (individual language),svahílí m.a. í Kenía og Tansaníu. 
+uzn,Northern Uzbek,norðurúsbekska
+uzs,Southern Uzbek,suðurúsbekska
+aym,Aymara,aímara
+sqi,Albanian,albanska
+als,Tosk Albanian,tosk-albanska- í suðurhluta Albaníu
+aln,Gheg Albanian,gheg-albanska- í norðurhluta Albaníu og Kósovó
+aze,Azerbaijani,aserska
+azj,North Azerbaijani,norðuraserska
+azb,South Azerbaijani,suðuraserska
+fin,Finnish,finnska
+fit,Tornedalen Finnish,tornedalsfinnska
+nld,Dutch,flæmska = hollenska
+vls,Vlaams,vesturflæmska
+frs,Eastern Frisian,austurfrísneska
+frr,Northern Frisian,norðurfrísneska
+fry,Western Frisian,vesturfrísneska
+nor,Norwegian,norska
+nno,Norwegian Nynorsk,nýnorska
+nob,Norwegian Bokmål,bókmál
+sme,Northern Sami,norðursamíska
+smn,Inari Sami,inarisamíska
+sjd,Kildin Sami,kildinsamíska
+smj,Lule Sami,lulesamíska
+sje,Pite Sami,pitesamíska
+sms,Skolt Sami,skoltsamíska
+sma,Southern Sami,suðursamíska
+sjt,Ter Sami,tersamíska
+sju,Ume Sami,umesamíska
+afr,Afrikaans,afríkanska
+act,Achterhoeks,akterhókska
+amh,Amharic,amharíska
+ara,Arabic,arabíska
+arg,Aragonese,aragónska
+hye,Armenian,armenska
+rup,Macedo-Romanian,arómanska
+frp,Arpitan,arpítanska
+ast,Asturian,astúríska
+bgx,Balkan Gagauz Turkish,balkantyrkneska
+eus,Basque,baskneska
+ben,Bengali,bengalska
+zgh,Standard Moroccan Tamazight,berbíska
+bis,Bislama,bíslama
+bos,Bosnian,bosníska
+tsn,Tswana,botsvanska
+bre,Breton,bretónska
+bul,Bulgarian,búlgarska
+mya,Burmese,búrmneska
+run,Rundi,búrúndíska
+dzo,Dzongkha,bútanska
+bar,Bavarian,bæverska
+dan,Danish,danska
+dsl,Danish Sign Language,danskt táknmál
+drt,Drents,drentíska
+eng,English,enska
+epo,Esperanto,esperantó
+fil,Filipino,filippseyska
+fse,Finnish Sign Language,finnskt táknmál
+fij,Fijian,fídjíska
+fra,French,franska
+fao,Faroese,færeyska
+gag,Gagauz,gagásíska
+glg,Galician,galisíska
+kat,Georgian,georgíska
+ell,Modern Greek (1453-),gríska
+gos,Gronings,gróningska
+kal,Kalaallisut,grænlenska
+hat,Haitian,haítíska
+haw,Hawaiian,havaíska
+heb,Hebrew,hebreska
+hin,Hindi,hindí
+hmo,Hiri Motu,hírímótú
+nld,Dutch,hollenska
+bel,Belarusian,hvítrússneska
+ind,Indonesian,indónesíska
+ruo,Istro Romanian,istríurúmenska
+gle,Irish,írska
+isl,Icelandic,íslenska
+icl,Icelandic Sign Language,íslenskt táknmál
+ita,Italian,ítalska
+jpn,Japanese,japanska
+jut,Jutish,jóska
+kbd,Kabardian,kabardíska
+khm,Khmer,kambódíska
+kqn,Kaonde,kaónde
+kaz,Kazakh,kasakska
+cat,Catalan,katalónska
+kir,Kirghiz,kirgiska
+krl,Karelian,kirjálska
+gil,Gilbertese,kíribatíska
+con,Cofán,kofanska
+cos,Corsican,korsíska
+kor,Korean,kóreska
+crh,Crimean Tatar,krímtatarska
+hrv,Croatian,króatíska
+ksh,Kölsch,kölníska
+lao,Lao,laoska
+lat,Latin,latína
+sli,Lower Silesian,lágslesíska
+lav,Latvian,lettneska
+lim,Limburgan,limbúrgíska
+lit,Lithuanian,litáíska
+lij,Ligurian,lígúríska
+lun,Lunda,lúnda
+lue,Luvale,lúvale
+ltz,Luxembourgish,lúxemborgska
+mkd,Macedonian,makedónska
+mlg,Malagasy,malagasíska
+mal,Malayalam,malajalam
+nya,Nyanja,malavíska
+div,Dhivehi,maldívska
+mlt,Maltese,maltneska
+glv,Manx,manx
+mri,Maori,maóríska
+mah,Marshallese,marshalleyska
+mwl,Mirandese,mírandíska
+ron,Romanian,moldóvska
+meu,Motu,mótúska
+nau,Nauru,naúrúska
+nau,Nauru,nárúska
+nbl,South Ndebele,ndebele
+nep,Nepali (macrolanguage),nepalska
+nso,Pedi,norðursótó
+nsl,Norwegian Sign Language,norskt táknmál
+oci,Occitan (post 1500),okkitíska
+pau,Palauan,palaúska
+pap,Papiamento,papíamentó
+pcd,Picard,pikardíska
+por,Portuguese,portúgalska
+pol,Polish,pólska
+roh,Romansh,retórómanska
+kin,Kinyarwanda,rúandska
+ron,Romanian,rúmenska
+rus,Russian,rússneska
+rue,Rusyn,rúteníska
+sdz,Sallands,sallenska
+smo,Samoan,samóska
+sag,Sango,sangó
+srp,Serbian,serbneska
+crs,Seselwa Creole French,seychelleseyska
+snd,Sindhi,sindíska
+sin,Sinhala,singalíska
+sna,Shona,sjóna
+gla,Scottish Gaelic,skosk gelíska
+sco,Scots,skoska
+szl,Silesian,slesíska
+slk,Slovak,slóvakíska
+slv,Slovenian,slóvenska
+som,Somali,sómalíska
+spa,Spanish,spænska
+stl,Stellingwerfs,stellingverfska
+sot,Southern Sotho,suðursótó
+zul,Zulu,súlúska
+srp,Serbian,svartfellska
+ssw,Swati,svaslenska
+swe,Swedish,sænska
+swl,Swedish Sign Language,sænskt táknmál
+tgk,Tajik,tadsíska
+tgl,Tagalog,tagalog
+tha,Thai,taílenska
+tam,Tamil,tamíl
+tat,Tatar,tatarska
+ces,Czech,tékkneska
+che,Chechen,téténska
+tir,Tigrinya,tígrinja
+tet,Tetum,tímorska
+tpi,Tok Pisin,tokpísín
+toi,Tonga (Zambia),tonga
+ton,Tonga (Tonga Islands),tongverska
+nya,Nyanja,tseva
+tso,Tsonga,tsonga
+tuk,Turkmen,túrkmenska
+tvl,Tuvalu,túvalúska
+twd,Twents,tventíska
+tur,Turkish,tyrkneska
+hun,Hungarian,ungverska
+lug,Ganda,úgandska
+ukr,Ukrainian,úkraínska
+urd,Urdu,úrdú
+wae,Walser,vallíska
+wln,Walloon,vallónska
+cym,Welsh,velska
+vel,Veluws,velúvíska
+ven,Venda,venda
+vec,Venetian,venetíska
+vie,Vietnamese,víetnamska
+vro,Võro,voróska
+xho,Xhosa,xhósa
+deu,German,þýska
