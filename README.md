@@ -6,9 +6,9 @@
 [![Release](https://img.shields.io/github/v/release/thrkll/pylond)]()
 [![pytest](https://github.com/thrkll/pylond/actions/workflows/python-app.yml/badge.svg)]()
 
-### Icelandic translations of countries and nationalities
+### Icelandic translations of countries, nationalities and languages
 
-`pylond` is a Python 3 package that provides Icelandic translations of countries and nationalities
+`pylond` is a Python 3 package that provides Icelandic translations of countries, nationalities and languages
 
 ## Installation
 
@@ -28,9 +28,9 @@ $ python setup.py install
 
 ## Usage examples
 
-### Look up a country based on the ISO-3166 codes
+###  Look up a country based on the ISO-3166 codes
 
-###### By two letter country code (ISO-3166-1 alpha2)
+###### 🔎 By two letter country code (ISO-3166-1 alpha2)
 
 ```python
 >>> from pylond import alpha2
@@ -50,7 +50,7 @@ $ python setup.py install
  'short_name': 'Kirgistan'}
 ```
 
-###### By three letter country code (ISO-3166-1 alpha3)
+###### 🔎 By three letter country code (ISO-3166-1 alpha3)
 
 ```python
 >>> from pylond import alpha3
@@ -70,7 +70,7 @@ $ python setup.py install
  'short_name': 'Botsvana'}
 ```
 
-###### By three digit numeric code (ISO-3166-1 numeric)
+###### 🔎 By three digit numeric code (ISO-3166-1 numeric)
 
 ```python
 >>> from pylond import numeric
@@ -90,14 +90,14 @@ $ python setup.py install
  'short_name': 'Tékkland'}
 ```
 
-### Search countries based on English short name
+### Country lookup based on English short name
 
-###### By English short name as defined by ISO-3166-1
+###### 🔎 By English short name as defined by ISO-3166-1
 
 ```python
->>> from pylond import from_english
+>>> from pylond import country_lookup
 
->>> result = from_english('guyana')
+>>> result = country_lookup('guyana')
 >>> pprint(result)
 
 [{'adjective_f': 'gvæjönsk',
@@ -113,12 +113,13 @@ $ python setup.py install
   'short_name': 'Gvæjana'}]
 ```
 
-###### Optionally, you can provide a `lev_ratio` parameter to aid with unconvential name spelling. The submitted string will be compared to the data with fuzzy [levensthein matching]() ratio. A value of `1.0` represents a perfect match (the default).
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` represents a perfect match (default). Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+
 
 ```python
->>> from pylond import from_english
+>>> from pylond import country_lookup
 
->>> result = from_english('iseland', lev_ratio=0.8)
+>>> result = country_lookup('iseland', lev_ratio=0.8, lang='en')
 >>> pprint(result)
 
 [{'adjective_f': 'írsk',
@@ -145,39 +146,96 @@ $ python setup.py install
   'short_name': 'Ísland'}]
 ```
 
-### Return all countries
+### Return all countries or languages 
 
-###### iter_countries() will return an alphabetic list of all countries. The *sort* parameter (optional) takes *en* (default) to sort based on the English short name or *is* to sort based on the Icelandic short name translation.
+###### 🔎 `iter_countries` and `iter_languages` will return an alphabetic list of all countries or languages respectively. The optional `sort` parameter takes either `is` or `en` (default) depending on which language to sort by.
 
 ```python
->>> from pylond import iter_countries
+>>> from pylond import iter_countries, iter_languages
 
->>> result = iter_countries(sort='isl')
+>>> result = iter_countries(sort='is')
 >>> pprint(result)
 
-[{country 1 😀},
- {country 2 😎},
- {et cetera 🤯}]
+[{country 1 🌎},
+ {country 2 🌎},
+ {et cetera 🌎}]
+
+>>> result = iter_languages(sort='is')
+>>> pprint(result)
+
+[{language 1 🧾},
+ {language 2 🧾},
+ {et cetera  🧾}]
+
+```
+### Look up a language based on the ISO-639-3 code
+
+###### 🔎 By three letter language code (ISO-3166-3 alpha3)
+
+```python
+>>> from pylond import lang_alpha3
+
+>>> result = lang_alpha3('bre')
+>>> pprint(result)
+
+{'alpha3': 'bre', 
+ 'english_name': 'Breton', 
+ 'icelandic_name': 'bretónska'}
+
+```
+
+### Language lookup based on English name
+
+###### 🔎 Based on English language name as defined by ISO-639-3
+```python
+>>> from pylond import lang_lookup
+
+>>> result = lang_lookup('Polish')
+>>> pprint(result)
+
+[{'alpha3': 'pol',
+  'english_name': 'Polish',
+  'icelandic_name': 'pólska',
+  'lev_ratio': 1.0}]
+
+```
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` represents a perfect match (default). Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+
+```python
+>>> from pylond import lang_lookup
+
+>>> result = lang_lookup('portúgalska', lang='is', lev_ratio=0.9)
+>>> pprint(result)
+
+[{'alpha3': 'por',
+  'english_name': 'Portuguese',
+  'icelandic_name': 'portúgalska',
+  'lev_ratio': 1.0}]
 
 ```
 
 ## Data
 
-pylond exclusively includes sovereign UN member and observer states.
+The data is [stored as CSV files](https://github.com/thrkll/pylond/blob/main/pylond/data) so it can also be utilized independent of the `pylond` package.
+
+
+### Limitations
+
+`pylond` exclusively includes sovereign UN member and observer state countries. Not all names of languages specified in ISO 639 have been translated to Icelandic. Included in `pylond` are nonetheless all languages that have a status of an official language in any sovereign UN member state with some additional ones.  
 
 For some countries, no official formal name exists and is therefore not translatable to Icelandic. Similarly, some countries either do not have an existing demonym (e.g. the Holy See) or no Icelandic translation exists (e.g. Saint Kitts and Nevis). In rare cases, adjectives of nationalities do not exist (e.g. Côte d'Ivoire) and are therefore missing from the data.
 
-The data is [stored as a CSV file](https://github.com/thrkll/pylond/blob/main/pylond/data/country_data.csv) so it can also be utilized independent of the pylond package.
-
 ### Source of data
 
-Codes and english short names are as per the ISO-3166 standard.
+Codes and English names are as per the ISO 3166 and ISO 639 standards.
 
-Icelandic translations of short and formal country names are from the Icelandic Term Bank. If two or more translations of a country name exist, only the translation recommended by the Language Planning Department of the Árni Magnússon Institute for Icelandic Studies is used.
+Icelandic translations of language names, short and formal country names are from the Icelandic Term Bank. If two or more translations of a country name exist, only the translation recommended by the Language Planning Department of the Árni Magnússon Institute for Icelandic Studies is used. 
 
-Pylond also embeds data from the [Database of Icelandic Morphology (DIM)](https://bin.arnastofnun.is/DMII/).
+`pylond` also embeds data from the [Database of Icelandic Morphology (DIM)](https://bin.arnastofnun.is/DMII/).
 
-#### 📄 [The International Standard for country codes and codes for their subdivisions](https://www.iso.org/iso-3166-country-codes.html)
+#### 📄 [ISO 3166 Country codes](https://www.iso.org/iso-3166-country-codes.html)
+
+#### 📄 [ISO 639 Language codes](https://www.iso.org/iso-639-language-codes.html)
 
 #### 📄 [The Icelandic Term bank / Íðorðabankinn](https://clarin.is/en/resources/termbank/) (CC-BY-SA 4.0)
 
