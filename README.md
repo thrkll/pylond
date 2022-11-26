@@ -8,7 +8,7 @@
 
 ### Icelandic translations of countries, nationalities and languages
 
-`pylond` is a Python 3 package that provides Icelandic translations of countries, nationalities and languages
+`pylond` is a Python 3 package that provides Icelandic translations of countries, nationalities and languages.
 
 ## Installation
 
@@ -113,7 +113,7 @@ $ python setup.py install
   'short_name': 'Gvæjana'}]
 ```
 
-###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` represents a perfect match (default). Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
 
 
 ```python
@@ -168,7 +168,7 @@ $ python setup.py install
  {et cetera  🧾}]
 
 ```
-### Look up a language based on the ISO-639-3 code
+### Look up a language based on the ISO-639 code
 
 ###### 🔎 By three letter language code (ISO-3166-3 alpha3)
 
@@ -190,7 +190,7 @@ $ python setup.py install
 ```python
 >>> from pylond import lang_lookup
 
->>> result = lang_lookup('Polish')
+>>> result = lang_lookup('polish')
 >>> pprint(result)
 
 [{'alpha3': 'pol',
@@ -199,18 +199,18 @@ $ python setup.py install
   'lev_ratio': 1.0}]
 
 ```
-###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` represents a perfect match (default). Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
 
 ```python
 >>> from pylond import lang_lookup
 
->>> result = lang_lookup('portúgalska', lang='is', lev_ratio=0.9)
+>>> result = lang_lookup('albaníska', lang='is', lev_ratio=0.9)
 >>> pprint(result)
 
-[{'alpha3': 'por',
-  'english_name': 'Portuguese',
-  'icelandic_name': 'portúgalska',
-  'lev_ratio': 1.0}]
+[{'alpha3': 'sqi',
+  'english_name': 'Albanian',
+  'icelandic_name': 'albanska',
+  'lev_ratio': 0.94}]
 
 ```
 
@@ -243,6 +243,8 @@ Icelandic translations of language names, short and formal country names are fro
 
 
 ## Versions
+
+📦 0.0.2 - Added support for translations of languages
 
 📦 0.0.1 - Initial unstable release
 
