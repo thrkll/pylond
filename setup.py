@@ -27,7 +27,7 @@ setuptools.setup(
             'Programming Language :: Python :: 3.11',
             'Topic :: Software Development :: Libraries :: Python Modules',
             'Topic :: Software Development :: Internationalization',
-            'Topic :: Software Development :: Localization'
+            'Topic :: Software Development :: Localization',
             'Topic :: Utilities'
     ],
     keywords='iso639, iso3166, localization, iceland, icelandic-language',
