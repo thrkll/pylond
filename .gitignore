@@ -1,8 +1,10 @@
 __pycache__/
 pylond/tests.py
 pylond/scrapers/
-pylond\__pycache__
-tests\__pycache__
+pylond/__pycache__
+tests/__pycache__
 .pytest_cache
 .geckodriver.log
-.pylond.egg-info
+pylond.egg-info/
+build/
+dist/
