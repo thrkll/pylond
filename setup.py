@@ -6,12 +6,22 @@ with open('README.md', 'r', encoding='utf-8') as f:
 setuptools.setup(
     name = 'pylond',
     version = '0.0.1',
-    author = 'Þorkell Einarsson',
-    author_email = 'thorkell@thorkell.lv',
-    description = 'pylond provides translations of countries and nationalities into Icelandic',
+    description = 'Python 3 package that provides Icelandic translations of countries, nationalities and languages',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    license = 'MIT',
     url = 'https://github.com/thrkll/pylond',
-    packages = ['pylond']
+    author = 'Þorkell Einarsson',
+    author_email = 'thorkell@thorkell.lv',
+    classifiers=[
+         'Development Status :: 3 - Alpha',
+         'Intended Audience :: Developers',
+         'Natural Language :: Icelandic',
+         'License :: OSI Approved :: MIT License',
+         'Programming Language :: Python :: 3',
+    ],
+    keywords='iceland, icelandic-language, localization',
+    license = 'MIT',
+    packages=['pylond'],
+    install_requires=['numpy'],
+    extras_require={'dev': ['pytest']}
     )

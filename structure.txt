@@ -1,19 +1,18 @@
 
 📦 pylond
-  📁 img
-    📷 img1.png
-    📷 img2.png
   📁 pylond
-    📜 pylond.py
-    📜 __init__.py
-    📜 tests.py
-    📁 scrapers
-        ...
     📁 data
       📜 country_data.csv
-      📜 country_data.json
-  📜 LICENCE.txt
-  📜 README.md
+      📜 language_data.csv 
+    📜 __init__.py
+    📜 countries.py
+    📜 languages.py
+    📜 mutual.py
+  📁 tests
+    📜 test_pylond.py
   📜 .gitignore
+  📜 LICENCE
+  📜 README.md
+  📜 requirements.txt
+  📜 setup.py
   📜 structure.txt
-  📜 todo.txt
