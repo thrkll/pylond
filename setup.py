@@ -5,8 +5,8 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setuptools.setup(
     name = 'pylond',
-    version = '0.0.2',
-    description = 'Python 3 package that provides Icelandic translations of countries, nationalities and languages',
+    version = '0.1.0',
+    description = 'Icelandic translations of countries, nationalities and languages',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/thrkll/pylond',

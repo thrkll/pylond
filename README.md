@@ -244,7 +244,7 @@ Icelandic translations of language names, short and formal country names are fro
 
 ## Versions
 
-📦 0.0.2 - Added support for translations of languages
+📦 0.1.0 - Added support for translations of languages
 
 📦 0.0.1 - Initial unstable release
 
