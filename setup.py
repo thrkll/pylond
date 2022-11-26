@@ -22,6 +22,6 @@ setuptools.setup(
     keywords='iceland, icelandic-language, localization',
     license = 'MIT',
     packages=['pylond'],
-    install_requires=['numpy'],
+    install_requires=[],
     extras_require={'dev': ['pytest']}
     )
