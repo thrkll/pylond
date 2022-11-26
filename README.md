@@ -8,7 +8,7 @@
 
 ### Icelandic translations of countries, nationalities and languages
 
-`pylond` is a Python 3 package that provides Icelandic translations of countries, nationalities and languages.
+`pylond` is a Python 3.6+ package that provides Icelandic translations of countries, nationalities and languages.
 
 ## Installation
 
