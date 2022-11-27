@@ -171,8 +171,8 @@ def test_lang_lookup_valid_parameters():
     assert isinstance(res, list)
     assert len(res) == 3
     assert res[0]['icelandic_name'] == 'búlgarska'
-    assert res[1]['icelandic_name'] == 'limbúrgíska'
-    assert res[2]['icelandic_name'] == 'lígúríska'
+    assert res[1]['icelandic_name'] == 'lígúríska'
+    assert res[2]['icelandic_name'] == 'limbúrgíska'
 
 # Iter_languages tests
 
@@ -181,7 +181,7 @@ def test_valid_iter_languages():
     assert res
     assert isinstance(res, list)
     assert len(res) >= 226
-    assert res[-1]['icelandic_name'] == 'þýska' # need to fix
+    assert res[-1]['english_name'] == 'Zulu'
     res = iter_languages(sort='is')
     assert res
     assert isinstance(res, list)
