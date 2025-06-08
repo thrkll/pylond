@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setuptools.setup(
     name = 'pylond',
-    version = '0.1.0',
+    version = '0.2.0',
     description = 'Icelandic translations of countries, nationalities and languages',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
