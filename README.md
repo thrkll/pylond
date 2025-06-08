@@ -47,7 +47,8 @@ $ python setup.py install
  'formal_name': 'Kirgiska lýðveldið',
  'demonym': 'Kirgisi',
  'numeric': '417',
- 'short_name': 'Kirgistan'}
+ 'short_name': 'Kirgistan',
+ 'preposition': 'í'}
 ```
 
 ###### 🔎 By three letter country code (ISO-3166-1 alpha3)
@@ -67,7 +68,8 @@ $ python setup.py install
  'formal_name': 'Lýðveldið Botsvana',
  'demonym': 'Botsvanamaður',
  'numeric': '72',
- 'short_name': 'Botsvana'}
+ 'short_name': 'Botsvana',
+ 'preposition': 'í'}
 ```
 
 ###### 🔎 By three digit numeric code (ISO-3166-1 numeric)
@@ -87,7 +89,8 @@ $ python setup.py install
  'formal_name': 'Tékkneska lýðveldið',
  'demonym': 'Tékki',
  'numeric': '203',
- 'short_name': 'Tékkland'}
+ 'short_name': 'Tékkland',
+ 'preposition': 'í'}
 ```
 
 ### Country lookup based on English short name
@@ -110,10 +113,11 @@ $ python setup.py install
   'lev_ratio': 1.0,
   'demonym': 'Gvæjanamaður',
   'numeric': '328',
-  'short_name': 'Gvæjana'}]
+  'short_name': 'Gvæjana',
+  'preposition': 'í'}]
 ```
 
-###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levenshtein matching](https://en.wikipedia.org/wiki/Levenshtein_distance) ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
 
 
 ```python
@@ -132,7 +136,8 @@ $ python setup.py install
   'lev_ratio': 0.86,
   'demonym': 'Íri',
   'numeric': '372',
-  'short_name': 'Írland'},
+  'short_name': 'Írland',
+  'preposition': 'í'},
  {'adjective_f': 'íslensk',
   'adjective_m': 'íslenskur',
   'adjective_n': 'íslenskt',
@@ -143,7 +148,8 @@ $ python setup.py install
   'lev_ratio': 0.86,
   'demonym': 'Íslendingur',
   'numeric': '352',
-  'short_name': 'Ísland'}]
+  'short_name': 'Ísland',
+  'preposition': 'á'}]
 ```
 
 ### Return all countries or languages 
@@ -199,7 +205,7 @@ $ python setup.py install
   'lev_ratio': 1.0}]
 
 ```
-###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levensthein matching]() ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
+###### 🔎 The optional `lev_ratio` parameter can aid with unconvential name spelling. The input string will be compared to the data with a [levenshtein matching](https://en.wikipedia.org/wiki/Levenshtein_distance) ratio. A value of `1.0` (default) represents a perfect match. Additionally, you can supply a `lang` parameter that takes either `is` or `en` (default) depending on which of the languages you want to iterate through. 
 
 ```python
 >>> from pylond import lang_lookup
@@ -243,6 +249,8 @@ Icelandic translations of language names, short and formal country names are fro
 
 
 ## Versions
+
+📦 0.2.0 - Added support for locative prepositions
 
 📦 0.1.0 - Added support for translations of languages
 
