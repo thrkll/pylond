@@ -18,7 +18,7 @@ def test_alpha2_valid_country():
     res = alpha2('is')
     assert res
     assert isinstance(res, dict)
-    assert len(res) == 10
+    assert len(res) == 11
     assert res['short_name'] == 'Ísland'
 
 def test_alpha2_invalid_country():
@@ -36,7 +36,7 @@ def test_alpha3_valid_country():
     res = alpha3('nor')
     assert res
     assert isinstance(res, dict)
-    assert len(res) == 10
+    assert len(res) == 11
     assert res['short_name'] == 'Noregur'
 
 def test_alpha3_invalid_country():
@@ -54,7 +54,7 @@ def test_numeric_valid_country():
     res = numeric(752)
     assert res
     assert isinstance(res, dict)
-    assert len(res) == 10
+    assert len(res) == 11
     assert res['short_name'] == 'Svíþjóð'
 
 def test_numeric_invalid_country():
@@ -195,3 +195,8 @@ def test_iter_languages_sort_invalid_type():
 def test_iter_languages_sort_invalid_string():
     with pytest.raises(ValueError):
         iter_languages(sort='english')
+
+def test_preposition_field():
+    res = alpha2("IS")
+    assert "preposition" in res
+    assert res["preposition"] == "á"
