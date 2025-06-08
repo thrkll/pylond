@@ -9,11 +9,8 @@ def alpha2(alpha2) -> dict:
     result = {}
     for row in items:
         if row[1].lower() == alpha2.lower():
-            for key in headers:
-                for value in row:
-                    result[key] = value
-                    row.remove(value)
-                    break
+            for key, value in zip(headers, row):
+                result[key] = value
     return result
 
 def alpha3(alpha3) -> dict:
@@ -25,14 +22,11 @@ def alpha3(alpha3) -> dict:
     result = {}
     for row in items:
         if row[2].lower() == alpha3.lower():
-            for key in headers:
-                for value in row:
-                    result[key] = value
-                    row.remove(value)
-                    break
+            for key, value in zip(headers, row):
+                result[key] = value
     return result
 
-def numeric(numeric)-> dict:
+def numeric(numeric) -> dict:
     '''Returns a dict based on the ISO-3166-1 numeric code.'''
     if not isinstance(numeric, int):
         raise TypeError(f'numeric should take int, got: {type(numeric).__name__}')
@@ -41,11 +35,8 @@ def numeric(numeric)-> dict:
     result = {}
     for row in items:
         if int(row[3]) == numeric:
-            for key in headers:
-                for value in row:
-                    result[key] = value
-                    row.remove(value)
-                    break
+            for key, value in zip(headers, row):
+                result[key] = value
     return result
 
 def country_lookup(name, lang='en', lev_ratio=1) -> list:
@@ -73,11 +64,8 @@ def country_lookup(name, lang='en', lev_ratio=1) -> list:
         ratio = levenshtein_ratio(comparison.lower(), name.lower())
         if ratio >= lev_ratio:
             inner_dict = {}
-            for key in headers:
-                for value in row:
-                    inner_dict[key] = value
-                    row.remove(value)
-                    break
+            for key, value in zip(headers, row):
+                inner_dict[key] = value
             inner_dict['lev_ratio'] = round(ratio, 2)
             result.append(inner_dict)
     return result
@@ -91,11 +79,8 @@ def iter_countries(sort='en') -> list:
     result = []
     for row in items:
         inner_dict = {}
-        for key in headers:
-            for value in row:
-                inner_dict[key] = value
-                row.remove(value)
-                break
+        for key, value in zip(headers, row):
+            inner_dict[key] = value
         result.append(inner_dict)
     if sort == 'is':
         result = sorted(result, key = lambda d: d['short_name'])
